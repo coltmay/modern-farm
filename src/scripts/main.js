@@ -36,7 +36,7 @@ let testArray = [
 ];
 
 console.log(testArray);
-    
+
 console.log(plantSeeds(testArray));
 
 /*--------------------------------*/

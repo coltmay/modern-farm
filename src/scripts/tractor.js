@@ -55,13 +55,15 @@ export const plantSeeds = (planArr) => {
         }
         // ...If it IS an array (in this case, only corn), it tries to...
         else {
+            for (i = 0; i < planArr[i].length; i++){
             // Probably need another for loop here?
             console.log("Corn...");
             // ...Invoke the addPlant function to the first object in the corn array.
-            addPlant(createCorn();
+            addPlant(createCorn());
             // ...Invoke the addPlant function to the second object in the corn array.
-            addPlant(createCorn();
+            //addPlant(createCorn());
             break;
+            }
         }
     }
 }
