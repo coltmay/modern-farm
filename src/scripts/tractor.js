@@ -16,7 +16,7 @@ import { addPlant } from "./fields.js";
     [X] Take that seed and add it to the array of plants in the field module.
 */
 export const plantSeeds = (planArr) => {
-    //  [ ] Figure out how to iterate both the parent array and the child arrays. 
+    //  [?] Figure out how to iterate both the parent array and the child arrays. 
     for (let i = 0; i < planArr.length; i++) {
         if (planArr[i].constructor !== Array) {
             switch (planArr[i]) {
@@ -46,7 +46,8 @@ export const plantSeeds = (planArr) => {
         }
         else {
             console.log("Corn...");
-            addPlant(createCorn());
+            addPlant(createCorn(planArray[0]));
+            addPlant(createCorn(planArray[1]));
             break;
         }
     }

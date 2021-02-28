@@ -32,7 +32,7 @@ let testArray = [
     "Asparagus", 
     "Wheat",
     "Potato",
-    "Corn"
+    "Corn"  // Corn is the issue.  Since it's two arrays.
 ];
 
 console.log(testArray);
