@@ -50,16 +50,17 @@ export const plantSeeds = (planArr) => {
                     addPlant(createSunflower());
                     break;
                 default:
-                    console.log("Warning.  Something Defaulted");
+                    console.log("Warning.  Something Defaulted!");
             }
         }
         // ...If it IS an array (in this case, only corn), it tries to...
         else {
+            // Probably need another for loop here?
             console.log("Corn...");
             // ...Invoke the addPlant function to the first object in the corn array.
-            addPlant(createCorn(planArray[0]));
+            addPlant(createCorn();
             // ...Invoke the addPlant function to the second object in the corn array.
-            addPlant(createCorn(planArray[1]));
+            addPlant(createCorn();
             break;
         }
     }
