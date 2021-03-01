@@ -10,11 +10,16 @@ const field = [];
         The function will add the seed to the field (How do you add something to an array? Do you remember the method for it?).
 ------------------------------------------------------------------------------------*/
 export const addPlant = (seedObject) => {
-    return field.push(seedObject);
+    if (Array.isArray(seedObject)) {
+        return field.push(seedObject[0], seedObject[1]);
+    }
+    else {
+        return field.push(seedObject);
+    }
 }
 /*  [X] Define and export a function named usePlants that returns a copy of the array of plants.
         Be aware that when planting corn, an array of objects will be provided instead of a single object like all the other type of seeds.
-    [ ] Investigate the Array.isArray method to check if corn got passed in, or one of the others.
+    [X] Investigate the Array.isArray method to check if corn got passed in, or one of the others.
 ------------------------------------------------------------------------------------*/
 export const usePlants = () => {
     return field;

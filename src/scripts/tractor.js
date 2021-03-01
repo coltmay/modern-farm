@@ -18,10 +18,51 @@ import { addPlant } from "./fields.js";
         (e.g. if the food type is "Asparagus", invoke the createAsparagus function to get an asparagus seed).
 
     [X] Take that seed and add it to the array of plants in the field module.
+
+    [?] Figure out how to iterate both the parent array and the child arrays. 
 */
 export const plantSeeds = (planArr) => {
-    //  [?] Figure out how to iterate both the parent array and the child arrays. 
-    
+    // INSERT FOR EACH LOOP HERE
+    // SECONDARY FOR EACH LOOP NEEDED, I BELIEVE?
+    switch (planArr[i]) {
+        case "Soybean":
+            console.log("Soybean!");
+            addPlant(createSoybean());
+            break;
+        case "Asparagus":
+            console.log("Asparagus!")
+            addPlant(createAsparagus());
+            break;
+        case "Wheat":
+            console.log("Wheat!")
+            addPlant(createWheat());
+            break;
+        case "Potato":
+            console.log("Potato!")
+            addPlant(createPotato());
+            break;
+        case "Sunflower":
+            console.log("Sunflower!")
+            addPlant(createSunflower());
+            break;
+        // Move corn somewhere else?
+        case "Corn":
+            console.log("Corn!")
+            addPlant(createCorn());
+            break;
+        default:
+            console.log("Warning.  Something Defaulted!");
+    }
+}
+
+
+
+//  Old, Broken, Broken Code
+
+/*
+
+
+export const plantSeeds = (planArr) => {
     //  My thought process about this function:
     //  Takes length of the array, and loops through it incrementally up to that value, while it is looping...
     for (let i = 0; i < planArr.length; i++) {
@@ -49,26 +90,27 @@ export const plantSeeds = (planArr) => {
                     console.log("Sunflower!")
                     addPlant(createSunflower());
                     break;
+                case "Corn":
+                    console.log("Corn!")
+                    addPlant(createCorn());
+                    break;
                 default:
                     console.log("Warning.  Something Defaulted!");
             }
         }
         // ...If it IS an array (in this case, only corn), it tries to...
-        else {
-            for (i = 0; i < planArr[i].length; i++){
-            // Probably need another for loop here?
-            console.log("Corn...");
-            // ...Invoke the addPlant function to the first object in the corn array.
-            addPlant(createCorn());
-            // ...Invoke the addPlant function to the second object in the corn array.
-            //addPlant(createCorn());
-            break;
-            }
-        }
+        // else {
+        //     for (i = 0; i < planArr[i].length; i++){
+        //     // Probably need another for loop here?
+        //     console.log("Corn...");
+        //     // ...Invoke the addPlant function to the first object in the corn array.
+        //     addPlant(createCorn());
+        //     // ...Invoke the addPlant function to the second object in the corn array.
+        //     //addPlant(createCorn());
+        //     break;
+        //     }
     }
 }
 
-/*
-    [ ] In the main.js module, invoke the function that plants all of the seeds, and then get the plants array from the fields.js module.
-    [ ] Then use console.log() to see if the plants array has been populated correctly.
+
 */

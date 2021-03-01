@@ -8,35 +8,8 @@ import { createWheat } from "./seeds/wheat.js"
 import { addPlant, usePlants } from "./fields.js"
 import { plantSeeds } from "./tractor.js"
 const yearlyPlan = createPlan()
-
-/* Temporary To Test Code
-----------------------------------
-createPotato()
-createAsparagus()
-createWheat()
-
-addPlant(createPotato)
-addPlant(createAsparagus)
-addPlant(createWheat)
-
-let tempPlant = usePlants()
-
-console.log(tempPlant);
---------------------------------*/
-
-/* Temporary To Test Code
-----------------------------------*/
-console.log(yearlyPlan);
-
-let testArray = [
-    "Asparagus", 
-    "Wheat",
-    "Potato",
-    "Corn"  // Corn is the issue.  Since it's two arrays.
-];
-
-console.log(testArray);
-
-console.log(plantSeeds(testArray));
-
-/*--------------------------------*/
+/*
+    [ ] In the main.js module, invoke the function that plants all of the seeds, and then get the plants array from the fields.js module.
+    [ ] Then use console.log() to see if the plants array has been populated correctly.
+*/
+createPlan();
