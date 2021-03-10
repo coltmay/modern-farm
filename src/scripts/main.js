@@ -1,24 +1,17 @@
+// Importing all functions.
+import { usePlants } from "./fields.js"
 import { createPlan } from "./plan.js"
-import { createAsparagus } from "./seeds/asparagus.js"
-import { createCorn } from "./seeds/corn.js"
-import { createPotato } from "./seeds/potato.js"
-import { createSoybean } from "./seeds/soybean.js"
-import { createSunflower } from "./seeds/sunflower.js"
-import { createWheat } from "./seeds/wheat.js"
-import { addPlant, usePlants } from "./field.js"
-const yearlyPlan = createPlan()
+import { plantSeeds } from "./tractor.js"
+import { harvestPlants } from "./harvester.js"
+import { catalog } from "./catalog.js"
 
-/* Temporary To Test Code
-----------------------------------
-createPotato()
-createAsparagus()
-createWheat()
+// Assigning the random plan to a variable.
+const yearlyPlan = createPlan();
 
-addPlant(createPotato)
-addPlant(createAsparagus)
-addPlant(createWheat)
+plantSeeds(yearlyPlan);
 
-let tempPlant = usePlants()
+const plantedfield = usePlants();
 
-console.log(tempPlant);
---------------------------------*/
+const harvestedField = harvestPlants(plantedfield);
+
+// catalog(harvestedField);
